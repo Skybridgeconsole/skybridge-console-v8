@@ -1,5 +1,5 @@
 {
-  "name": "skybridge-console-v8-empire-build",
+  "name": "skybridge-console-v8-final-execution",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
