@@ -1,5 +1,6 @@
+
 {
-  "name": "skybridge-console-v8-final-with-visible-public",
+  "name": "skybridge-console-v8",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
