@@ -11,11 +11,11 @@ export default function Home() {
       background: '#ffffff',
     }}>
       <div style={{
-        padding: '10px',
-        borderRadius: '30px',
+        padding: '12px',
+        borderRadius: '35px',
         background: '#ffffff',
         boxShadow: '0 0 25px rgba(255, 255, 255, 0.25)',
-        border: '1px solid rgba(0, 0, 0, 0.04)',
+        border: '1px solid rgba(0, 0, 0, 0.05)',
         transition: 'transform 0.4s ease, box-shadow 0.4s ease',
         cursor: 'pointer',
       }}
@@ -32,8 +32,8 @@ export default function Home() {
           background: 'rgba(255, 255, 255, 0.15)',
           borderRadius: '20px',
           padding: '35px',
-          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.03)',
-          border: '1px solid rgba(0, 0, 0, 0.04)',
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)',
+          border: '1px solid rgba(0, 0, 0, 0.1)',
           textAlign: 'center',
           width: '260px',
           height: '260px',
@@ -43,7 +43,7 @@ export default function Home() {
           alignItems: 'center',
         }}>
           <div style={{ marginBottom: '20px' }}>
-            <Image src="/brain.png" alt="SkySync Brain" width={100} height={100} />
+            <Image src="/brain.png" alt="SkySync Brain" width={120} height={120} />
           </div>
           <h1 style={{ color: '#0a0a0a', fontSize: '26px', fontWeight: '700', letterSpacing: '0.5px' }}>SkySync Brain</h1>
           <p style={{ color: '#666', fontSize: '15px' }}>Empire Intelligence Engine</p>
