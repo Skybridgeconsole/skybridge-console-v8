@@ -9,6 +9,7 @@ export default function Home() {
       alignItems: 'center',
       height: '100vh',
       background: '#ffffff',
+      fontFamily: 'Arial, sans-serif',
     }}>
       <div style={{
         padding: '12px',
@@ -43,14 +44,14 @@ export default function Home() {
           alignItems: 'center',
         }}>
           <div style={{ marginBottom: '20px' }}>
-            <Image src="/brain.png" alt="SkySync Brain" width={120} height={120} />
+            <Image src="/brain.png" alt="SkySync Brain" width={100} height={100} />
           </div>
           <h1 style={{ 
               color: '#0a0a0a', 
               fontSize: '28px', 
               fontWeight: '900', 
               letterSpacing: '1px', 
-              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)' 
+              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)'
             }}>
               SkySync Brain
           </h1>
