@@ -45,8 +45,23 @@ export default function Home() {
           <div style={{ marginBottom: '20px' }}>
             <Image src="/brain.png" alt="SkySync Brain" width={120} height={120} />
           </div>
-          <h1 style={{ color: '#0a0a0a', fontSize: '26px', fontWeight: '700', letterSpacing: '0.5px' }}>SkySync Brain</h1>
-          <p style={{ color: '#555', fontSize: '15px' }}>Empire Intelligence Engine</p>
+          <h1 style={{ 
+              color: '#0a0a0a', 
+              fontSize: '28px', 
+              fontWeight: '900', 
+              letterSpacing: '1px', 
+              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)' 
+            }}>
+              SkySync Brain
+          </h1>
+          <p style={{ 
+              color: '#555', 
+              fontSize: '16px', 
+              letterSpacing: '0.5px', 
+              textShadow: '1px 1px 1px rgba(0, 0, 0, 0.05)'
+            }}>
+              Empire Intelligence Engine
+          </p>
         </div>
       </div>
     </div>
