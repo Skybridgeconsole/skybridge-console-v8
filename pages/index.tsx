@@ -1,6 +1,8 @@
 
 import Image from 'next/image';
 
+// Skybridge Master Block V3++ ULTRA Final Verified Version 1.0.1
+
 export default function Home() {
   return (
     <div style={{
@@ -44,7 +46,7 @@ export default function Home() {
           alignItems: 'center',
         }}>
           <div style={{ marginBottom: '20px' }}>
-            <Image src="/brain.png" alt="SkySync Brain" width={100} height={100} />
+            <Image src="/brain-premium.png" alt="SkySync Brain" width={100} height={100} />
           </div>
           <h1 style={{ 
               color: '#0a0a0a', 
