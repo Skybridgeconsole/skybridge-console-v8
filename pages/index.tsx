@@ -11,32 +11,32 @@ export default function Home() {
       background: '#ffffff',
     }}>
       <div style={{
-        padding: '15px',
-        borderRadius: '35px',
+        padding: '10px',
+        borderRadius: '30px',
         background: '#ffffff',
-        boxShadow: '0 0 30px rgba(255, 255, 255, 0.25)',
+        boxShadow: '0 0 25px rgba(255, 255, 255, 0.25)',
         border: '1px solid rgba(0, 0, 0, 0.04)',
         transition: 'transform 0.4s ease, box-shadow 0.4s ease',
         cursor: 'pointer',
       }}
         onMouseEnter={e => {
           e.currentTarget.style.transform = 'scale(1.04)';
-          e.currentTarget.style.boxShadow = '0 0 60px rgba(255, 255, 255, 0.35)';
+          e.currentTarget.style.boxShadow = '0 0 50px rgba(255, 255, 255, 0.35)';
         }}
         onMouseLeave={e => {
           e.currentTarget.style.transform = 'scale(1)';
-          e.currentTarget.style.boxShadow = '0 0 30px rgba(255, 255, 255, 0.25)';
+          e.currentTarget.style.boxShadow = '0 0 25px rgba(255, 255, 255, 0.25)';
         }}
       >
         <div style={{
           background: 'rgba(255, 255, 255, 0.15)',
           borderRadius: '20px',
-          padding: '40px',
+          padding: '35px',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.03)',
           border: '1px solid rgba(0, 0, 0, 0.04)',
           textAlign: 'center',
-          width: '280px',
-          height: '280px',
+          width: '260px',
+          height: '260px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
