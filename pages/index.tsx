@@ -46,11 +46,11 @@ export default function Home() {
         }}>
           <div style={{
             background: '#ffffff',
-            borderRadius: '10px',
-            border: '1.2px solid rgba(0, 0, 0, 0.1)',
-            padding: '1px',
-            marginBottom: '12px',
-            boxShadow: '0 3px 12px rgba(0, 0, 0, 0.05)'
+            borderRadius: '8px',
+            border: '1px solid rgba(0, 0, 0, 0.1)',
+            padding: '0.5px',
+            marginBottom: '10px',
+            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.04)'
           }}>
             <Image src="/brain.png" alt="SkySync Brain" width={195} height={195} />
           </div>
