@@ -44,16 +44,7 @@ export default function Home() {
           textAlign: 'center',
           boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.03)'
         }}>
-          <div style={{
-            background: '#ffffff',
-            borderRadius: '8px',
-            border: '1px solid rgba(0, 0, 0, 0.1)',
-            padding: '0.5px',
-            marginBottom: '10px',
-            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.04)'
-          }}>
-            <Image src="/brain.png" alt="SkySync Brain" width={195} height={195} />
-          </div>
+          <Image src="/brain.png" alt="SkySync Brain" width={195} height={195} style={{ marginBottom: '10px' }} />
           <h1 style={{
             color: '#0b1f33',
             fontSize: '29px',
