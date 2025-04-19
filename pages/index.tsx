@@ -48,7 +48,7 @@ export default function Home() {
             background: '#ffffff',
             borderRadius: '10px',
             border: '1.2px solid rgba(0, 0, 0, 0.1)',
-            padding: '6px',
+            padding: '1px',
             marginBottom: '12px',
             boxShadow: '0 3px 12px rgba(0, 0, 0, 0.05)'
           }}>
