@@ -1,6 +1,6 @@
 {
-  "name": "skybridge-wealth-console",
-  "version": "2.0.1",
+  "name": "skybridge-wealth-console-v3",
+  "version": "2.0.2",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
