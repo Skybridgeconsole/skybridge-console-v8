@@ -1,64 +1,85 @@
 
 import Image from 'next/image';
 
-export default function Home() {
+export default function Dashboard() {
   return (
-    <div style={{
-      height: '100vh',
-      background: '#f9f9f9',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
+    <div style={{ display: 'flex', height: '100vh', background: '#fff' }}>
+      {/* Sidebar */}
       <div style={{
-        borderRadius: '18px',
-        background: 'rgba(255, 255, 255, 0.2)',
-        padding: '16px',
-        boxShadow: '0 12px 30px rgba(0, 0, 0, 0.06)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
-        border: '1px solid rgba(0, 0, 0, 0.05)',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-        transform: 'translateZ(0)',
-        cursor: 'pointer'
-      }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'scale(1.05)';
-          e.currentTarget.style.boxShadow = '0 20px 45px rgba(255, 215, 0, 0.18)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'scale(1)';
-          e.currentTarget.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.06)';
-        }}
-      >
+        width: '220px',
+        background: '#0a1a2f',
+        padding: '20px',
+        color: 'white',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}>
+        <div>
+          <h2 style={{ color: '#f5cc52', fontSize: '18px' }}>Skybridge</h2>
+          <nav style={{ marginTop: '40px' }}>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li style={{ margin: '12px 0' }}>Dashboard</li>
+              <li style={{ margin: '12px 0' }}>Modules</li>
+              <li style={{ margin: '12px 0' }}>Settings</li>
+            </ul>
+          </nav>
+        </div>
+        <div style={{ fontSize: '12px', color: '#ccc' }}>© 2025 Skybridge</div>
+      </div>
+
+      {/* Main Content */}
+      <div style={{ flex: 1, padding: '30px', display: 'flex', flexDirection: 'column' }}>
+        {/* Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '30px' }}>
+          <div style={{ fontSize: '18px', fontWeight: 'bold' }}>Welcome, Mauro 👋</div>
+          <div style={{ fontSize: '14px', color: '#666' }}>Weather: 🌤️ 78°F McAllen, TX</div>
+        </div>
+
+        {/* Module Grid */}
         <div style={{
-          background: '#ffffff',
-          borderRadius: '14px',
-          border: '1.2px solid rgba(0, 0, 0, 0.08)',
-          width: '260px',
-          height: '280px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          boxShadow: 'inset 0 0 8px rgba(0, 0, 0, 0.03)'
+          display: 'grid',
+          gridTemplateColumns: 'repeat(5, 1fr)',
+          gap: '20px',
+          flexGrow: 1,
         }}>
-          <Image src="/brain.png" alt="SkySync Brain" width={195} height={195} style={{ marginBottom: '10px' }} />
-          <h1 style={{
-            color: '#0b1f33',
-            fontSize: '29px',
-            fontWeight: '700',
-            fontFamily: 'sans-serif',
-            margin: 0
-          }}>SkySync Brain</h1>
-          <p style={{
-            color: '#0b1f33',
-            fontSize: '15px',
-            fontWeight: '400',
-            fontFamily: 'sans-serif',
-            marginTop: '6px'
-          }}>The Power Core of Skybridge</p>
+          {[...Array(10)].map((_, i) => (
+            <div key={i} style={{
+              borderRadius: '18px',
+              background: '#ffffff',
+              border: '1px solid rgba(0,0,0,0.08)',
+              boxShadow: '0 8px 16px rgba(0,0,0,0.04)',
+              textAlign: 'center',
+              padding: '25px 10px',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'scale(1.03)';
+                e.currentTarget.style.boxShadow = '0 20px 30px rgba(255,215,0,0.2)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.04)';
+              }}
+            >
+              <Image src="/brain.png" alt="Brain" width={80} height={80} />
+              <h3 style={{ margin: '12px 0 6px', fontSize: '16px' }}>Module {i + 1}</h3>
+              <p style={{ fontSize: '12px', color: '#555' }}>The Power Core of Skybridge</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Jumbotron / Quotetrone */}
+        <div style={{
+          marginTop: '30px',
+          padding: '20px',
+          textAlign: 'center',
+          background: '#f8f8f8',
+          borderRadius: '14px',
+          fontStyle: 'italic',
+          fontSize: '14px',
+          boxShadow: 'inset 0 2px 6px rgba(0,0,0,0.05)'
+        }}>
+          “The bridge between dreams and reality is built by vision, sacrifice, and God-given purpose.” — Skybridge Empire
         </div>
       </div>
     </div>
