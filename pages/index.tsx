@@ -3,7 +3,8 @@ import Image from 'next/image';
 
 export default function Dashboard() {
   return (
-    <div style={{ display: 'flex', height: '100vh', background: '#fff' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#fff' }}>
+      {/* Sidebar */}
       <div style={{
         width: '200px',
         background: '#0a1a2f',
@@ -26,56 +27,65 @@ export default function Dashboard() {
         <div style={{ fontSize: '12px', color: '#ccc' }}>© 2025 Skybridge</div>
       </div>
 
-      <div style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
+      {/* Main Area */}
+      <div style={{ flex: 1, padding: '24px', display: 'flex', flexDirection: 'column' }}>
+        {/* Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '24px' }}>
           <div style={{ fontSize: '18px', fontWeight: 'bold' }}>Welcome, Mauro 👋</div>
           <div style={{ fontSize: '14px', color: '#666' }}>Weather: 🌤️ 78°F McAllen, TX</div>
         </div>
 
+        {/* Square Module Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(5, 1fr)',
-          gap: '12px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+          gap: '18px',
           flexGrow: 1,
         }}>
           {[...Array(10)].map((_, i) => (
             <div key={i} style={{
-              borderRadius: '12px',
               background: '#ffffff',
-              border: '1px solid rgba(0,0,0,0.07)',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.025)',
+              borderRadius: '20px',
+              border: '1px solid rgba(0,0,0,0.08)',
+              boxShadow: '0 6px 12px rgba(0,0,0,0.04)',
+              height: '140px',
+              width: '140px',
               textAlign: 'center',
-              padding: '12px 6px',
+              padding: '14px 8px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              cursor: 'pointer',
             }}
               onMouseEnter={e => {
-                e.currentTarget.style.transform = 'scale(1.03)';
-                e.currentTarget.style.boxShadow = '0 12px 20px rgba(255,215,0,0.12)';
+                e.currentTarget.style.transform = 'scale(1.05)';
+                e.currentTarget.style.boxShadow = '0 16px 26px rgba(255,215,0,0.18)';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = '0 4px 10px rgba(0,0,0,0.025)';
+                e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.04)';
               }}
             >
               <Image src="/brain.png" alt="Brain" width={50} height={50} />
-              <h3 style={{ margin: '10px 0 4px', fontSize: '13px' }}>Module {i + 1}</h3>
-              <p style={{ fontSize: '10px', color: '#555' }}>The Power Core of Skybridge</p>
+              <h3 style={{ marginTop: '10px', fontSize: '12px' }}>Module {i + 1}</h3>
             </div>
           ))}
         </div>
 
+        {/* Quotetrone */}
         <div style={{
-          marginTop: '20px',
-          padding: '14px 18px',
+          marginTop: '24px',
+          padding: '16px',
           textAlign: 'center',
-          background: 'rgba(255, 255, 255, 0.45)',
-          backdropFilter: 'blur(8px)',
-          border: '1px solid rgba(0,0,0,0.06)',
-          borderRadius: '10px',
-          fontStyle: 'italic',
-          fontSize: '12px',
+          background: 'rgba(255,255,255,0.5)',
+          backdropFilter: 'blur(10px)',
+          borderRadius: '12px',
+          fontSize: '13px',
           color: '#333',
-          boxShadow: '0 1px 5px rgba(0, 0, 0, 0.05)'
+          fontStyle: 'italic',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
         }}>
           “The bridge between dreams and reality is built by vision, sacrifice, and God-given purpose.” — Skybridge Empire
         </div>
