@@ -1,7 +1,23 @@
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+const quotes = [
+  "The bridge between dreams and reality is built by vision, sacrifice, and God-given purpose.",
+  "Great empires aren't built in a day—but every day matters.",
+  "Your legacy is the blueprint someone else is waiting for.",
+];
+
 export default function Dashboard() {
+  const [quoteIndex, setQuoteIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setQuoteIndex((prev) => (prev + 1) % quotes.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div style={{ display: 'flex', minHeight: '100vh', background: '#ffffff' }}>
       {/* Sidebar */}
@@ -48,10 +64,10 @@ export default function Dashboard() {
               height: '150px',
               width: '150px',
               borderRadius: '20px',
-              background: 'rgba(255,255,255,0.85)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(0,0,0,0.08)',
-              boxShadow: '0 0 24px rgba(255, 255, 255, 0.35)',
+              background: 'rgba(255, 255, 255, 0.25)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+              boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -61,12 +77,12 @@ export default function Dashboard() {
               textAlign: 'center'
             }}
               onMouseEnter={e => {
-                e.currentTarget.style.transform = 'scale(1.04)';
-                e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 255, 255, 0.4)';
+                e.currentTarget.style.transform = 'scale(1.05)';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.08)';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = '0 0 24px rgba(255, 255, 255, 0.35)';
+                e.currentTarget.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.05)';
               }}
             >
               <Image src="/brain.png" alt="Brain" width={48} height={48} />
@@ -78,18 +94,20 @@ export default function Dashboard() {
         {/* Quotetrone */}
         <div style={{
           marginTop: '32px',
-          padding: '18px',
+          padding: '20px',
           textAlign: 'center',
-          background: 'rgba(255, 255, 255, 0.5)',
-          borderRadius: '12px',
+          background: 'rgba(255, 255, 255, 0.4)',
+          borderRadius: '14px',
           border: '1px solid rgba(0,0,0,0.06)',
-          backdropFilter: 'blur(10px)',
-          fontSize: '13px',
+          backdropFilter: 'blur(16px)',
+          fontSize: '13.5px',
           color: '#333',
           fontStyle: 'italic',
-          boxShadow: '0 2px 12px rgba(0,0,0,0.05)'
+          fontWeight: 500,
+          boxShadow: '0 2px 20px rgba(0,0,0,0.06)',
+          transition: 'opacity 0.5s ease'
         }}>
-          <div>“The bridge between dreams and reality is built by vision, sacrifice, and God-given purpose.” — Skybridge Empire</div>
+          <div key={quoteIndex}>{quotes[quoteIndex]}</div>
         </div>
       </div>
     </div>
