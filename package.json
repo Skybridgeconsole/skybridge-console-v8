@@ -1,6 +1,6 @@
 {
-  "name": "skybridge-console-squares",
-  "version": "3.0.0",
+  "name": "skybridge-console-v8-ultra",
+  "version": "3.0.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
