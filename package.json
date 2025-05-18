@@ -1,5 +1,5 @@
 {
-  "name": "skybridge-calculator-income",
+  "name": "skybridge-console-income-app",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
