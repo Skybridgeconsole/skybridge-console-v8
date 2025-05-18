@@ -1,10 +1,15 @@
 
 import { useState } from 'react';
 
-export default function IncomeBlockSimulator() {
-  const [sources, setSources] = useState([{ label: '', amount: '' }]);
+type IncomeSource = {
+  label: string;
+  amount: string;
+};
 
-  const handleChange = (index, field, value) => {
+export default function IncomeBlockSimulator() {
+  const [sources, setSources] = useState<IncomeSource[]>([{ label: '', amount: '' }]);
+
+  const handleChange = (index: number, field: 'label' | 'amount', value: string) => {
     const updated = [...sources];
     updated[index][field] = value;
     setSources(updated);
@@ -14,7 +19,7 @@ export default function IncomeBlockSimulator() {
     setSources([...sources, { label: '', amount: '' }]);
   };
 
-  const total = sources.reduce((sum, s) => sum + parseFloat(s.amount || 0), 0);
+  const total = sources.reduce((sum, s) => sum + (parseFloat(s.amount) || 0), 0);
 
   return (
     <div style={{ maxWidth: 600, margin: '40px auto', padding: 24, borderRadius: 12, background: '#fff', boxShadow: '0 8px 20px rgba(0,0,0,0.05)' }}>
